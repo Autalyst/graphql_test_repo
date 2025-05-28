@@ -1,0 +1,10 @@
+services:
+  postgres:
+    image: postgres:17.5-alpine3.21
+    container_name: chapter_manager_psql
+    environment:
+      POSTGRES_USER: my_username
+      POSTGRES_PASSWORD: my_password
+      POSTGRES_DB: chapter_manager
+    ports:
+      - "5432:5432"

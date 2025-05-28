@@ -1,0 +1,19 @@
+type Chapter {
+    id: ID!
+    name: String
+    memberCount: Int
+    active: Boolean
+    members: [Member]
+}
+
+type Member {
+    id: ID!
+    name: String!
+    email: String!
+    chapter: Chapter
+}
+
+type Query {
+    chapterById(id: ID!): Chapter
+    memberById(id: ID!): Member
+}
