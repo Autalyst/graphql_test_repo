@@ -19,6 +19,6 @@ class MemberController(
 
     @SchemaMapping(typeName = "Member")
     fun chapter(member: MemberDto): ChapterDto {
-        return chapterService.findChapterForMember(member)
+        return chapterService.findById(member.chapterId).get()
     }
 }
